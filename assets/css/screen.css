@@ -1,0 +1,64 @@
+@import "@tryghost/shared-theme-assets/assets/css/screen.css";
+@import "general/fonts.css";
+@import "general/basics.css";
+@import "general/button.css";
+@import "general/form.css";
+@import "general/icons.css";
+@import "site/layout.css";
+@import "site/header.css";
+@import "site/cover.css";
+@import "blog/feed.css";
+@import "blog/featured.css";
+@import "blog/pagination.css";
+@import "blog/single.css";
+@import "blog/author.css";
+@import "blog/share.css";
+@import "blog/navigation.css";
+@import "blog/related.css";
+@import "blog/taxonomy.css";
+@import "misc/tiny-slider.css";
+@import "misc/utils.css";
+@import "misc/portal.css";
+@import "misc/animations.css";
+
+.gh-inner h2 {
+    text-align: center;
+}
+
+.features-wrapper, .organizer-wrapper, .section-wrapper {
+    margin-top: 3rem;
+    padding-top: 6vmin;
+}
+
+.features-wrapper, .organizer-wrapper, .section-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.features-wrapper .post-title, 
+.organizer-wrapper .post-title ,
+.section-wrapper .post-title {
+    flex: 0 0 100%; 
+    margin-bottom: 20px;
+}
+
+.features-wrapper .post {
+    flex: 0 0 33.33333%;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.organizer-wrapper .post {
+    flex: 0 0 20%;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    box-sizing: border-box; 
+}
+
+@media (max-width: 768px) {
+    .features-wrapper .post, .organizer-wrapper .post {
+        flex: 0 0 100%;
+    }
+}
+
