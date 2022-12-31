@@ -22,7 +22,7 @@
 @import "misc/animations.css";
 
 .gh-inner h2 {
-    /* text-align: center; */
+    text-align: center;
 }
 
 .features-wrapper, .organizer-wrapper, .section-wrapper {
