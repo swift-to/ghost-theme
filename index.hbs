@@ -24,11 +24,45 @@
 
     <hr />
 
+    <!-- Ticket Checkout -->
+    <div class="gh-outer">
+        <section class="gh-inner section-wrapper" id="sign-up">
+            <div class="container">
+                <div id="eventbrite-widget-container-492122691217"></div>
+                    <script src="https://www.eventbrite.ca/static/widgets/eb_widgets.js"></script>
+                    <script type="text/javascript">
+                        var callback = function () {
+                            console.log('Order complete!');
+                        };
+
+                        window.EBWidgets.createWidget({
+                            // Required
+                            widgetType: 'checkout',
+                            eventId: '492122691217',
+                            iframeContainerId: 'eventbrite-widget-container-492122691217',
+
+                            // Optional
+                            iframeContainerHeight: 425,  // Widget height in pixels. Defaults to a minimum of 425px if not provided
+                            onOrderComplete: callback  // Method called when an order has successfully completed
+                        });
+                    </script>
+            </div>
+        </section>
+    </div>
+
+    <!-- CFP -->
+    <div class="gh-outer">
+        <section class="organizer-wrapper gh-inner">
+                <h3 class="post-title">Calling All Speakers!!!</h3>
+                <a href="https://forms.gle/hYCoi6x7ZmwLT3WH6">Submit Talk Propsal(s)</a>
+        </section>
+    </div>
+
     <!-- Email Sign Up -->
     <div class="gh-outer">
         <section class="gh-inner section-wrapper" id="sign-up">
             <div class="container">
-                <h3 class="conference-sign-up post-title">Sign-up to be notified when tickets go on sale</h3>
+                <h3 class="conference-sign-up post-title">Sign-up to be notified of any updates</h3>
                 <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
                 <div id="mc_embed_signup">
                     <form class="validate" id="mc-embedded-subscribe-form"
