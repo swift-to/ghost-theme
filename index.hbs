@@ -28,24 +28,8 @@
     <div class="gh-outer">
         <section class="gh-inner section-wrapper" id="sign-up">
             <div class="container">
-                <div id="eventbrite-widget-container-492122691217"></div>
-                    <script src="https://www.eventbrite.ca/static/widgets/eb_widgets.js"></script>
-                    <script type="text/javascript">
-                        var callback = function () {
-                            console.log('Order complete!');
-                        };
-
-                        window.EBWidgets.createWidget({
-                            // Required
-                            widgetType: 'checkout',
-                            eventId: '492122691217',
-                            iframeContainerId: 'eventbrite-widget-container-492122691217',
-
-                            // Optional
-                            iframeContainerHeight: 425,  // Widget height in pixels. Defaults to a minimum of 425px if not provided
-                            onOrderComplete: callback  // Method called when an order has successfully completed
-                        });
-                    </script>
+                <iframe allowtransparency="true" frameborder="0" height="500" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" src="//eventbrite.com/tickets-external?eid=492122691217&amp;ref=etckt" vspace="0" width="100%" kwframeid="1">
+                </iframe>
             </div>
         </section>
     </div>
