@@ -11,7 +11,7 @@
     <!-- Conference Features -->
     <div class="gh-outer">
         <section class="features-wrapper gh-inner">
-                {{#get "posts" filter="tags:Feature" order="published_at asc"}}
+                {{#get "posts" filter="tags:feature" order="published_at asc"}}
                     {{#foreach posts}}
                     <article class="{{post_class}}">
                         <h3 class="post-title">{{title}}</h3>
@@ -55,7 +55,7 @@
     <!-- CFP -->
     <div class="gh-outer">
         <section class="organizer-wrapper gh-inner" style="margin-bottom: 50px;">
-                <h3 class="post-title">Calling All Speakers!!!</h3>
+                <h3 class="post-title">Calling All Speakers!</h3>
                 <a class="gh-head-btn gh-btn gh-primary-btn" href="https://forms.gle/hYCoi6x7ZmwLT3WH6" target="_blank">Submit Talk Propsal(s)</a>
         </section>
     </div>
@@ -92,7 +92,7 @@
     <div class="gh-outer">
         <section class="organizer-wrapper gh-inner">
                 <h3 class="post-title">Organizers</h3>
-                {{#get "posts" filter="tags:Organizer" order="published_at asc"}}
+                {{#get "posts" filter="tags:organizer" order="published_at asc"}}
                     {{#foreach posts}}
                     <article class="{{post_class}}">
                             <div class="u-placeholder horizontal">
