@@ -19,3 +19,11 @@
         margin: 0;
     }
 }
+
+.home-template .gh-head {
+    background-color: black;
+}
+
+.home-template .gh-head a {
+    color: white;
+}

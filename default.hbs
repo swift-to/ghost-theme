@@ -16,7 +16,8 @@
 
     <header id="gh-head" class="gh-head gh-outer">
         <div class="gh-head-inner">
-            <div class="gh-head-brand">
+            
+            {{!-- <div class="gh-head-brand">
                 <div class="gh-head-brand-wrapper">
                     <a class="gh-head-logo" href="{{@site.url}}">
                         {{#if @site.logo}}
@@ -28,15 +29,10 @@
                 </div>
                 <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
                 <button class="gh-burger"></button>
-            </div>
+            </div> --}}
 
             <nav class="gh-head-menu">
                 {{navigation}}
-                {{#unless @site.members_enabled}}
-                    {{#match @custom.navigation_layout "Stacked"}}
-                        <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
-                    {{/match}}
-                {{/unless}}
             </nav>
 
             <div class="gh-head-actions">
@@ -60,13 +56,6 @@
         </div>
     </header>
 
-    {{#is "home"}}
-        {{> "cover"}}
-        {{!-- {{#if @custom.show_featured_posts}}
-            {{> "featured-posts"}}
-        {{/if}} --}}
-    {{/is}}
-
     <div class="site-content">
         {{{body}}}
     </div>
@@ -79,9 +68,6 @@
             <nav class="gh-foot-menu">
                 {{navigation type="secondary"}}
             </nav>
-            <div class="gh-powered-by">
-                <a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a>
-            </div>
         </div>
     </footer>
 

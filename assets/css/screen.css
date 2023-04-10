@@ -1,4 +1,4 @@
-@import "@tryghost/shared-theme-assets/assets/css/screen.css";
+/* @import "@tryghost/shared-theme-assets/assets/css/screen.css"; */
 @import "general/fonts.css";
 @import "general/basics.css";
 @import "general/button.css";
@@ -21,22 +21,96 @@
 @import "misc/portal.css";
 @import "misc/animations.css";
 
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+blockquote, body, dd, dl, figure, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-sans); 
+    /* font-size: 10px; */
+    line-height: 1.6;
+    text-rendering: optimizespeed;
+}
+
+.gh-outer, article.single {
+    padding-left: var(--gap);
+    padding-right: var(--gap);
+    -webkit-font-smoothing: antialiased;
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+@media (min-width: 992px) {
+    .is-head-stacked .gh-head-menu {
+        grid-column: 1/4;
+        grid-row-start: 2;
+        height: 56px;
+        justify-content: center;
+        margin: 0 48px;
+    }
+}
+
+.gh-head .nav {
+    display: inline-flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.gh-head .nav, .gh-head-menu {
+    align-items: center;
+    gap: var(--head-nav-gap);
+}
+
+.gh-head-menu {
+    display: flex;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.gh-inner {
+    font-size: 1.6rem;
+    padding: 6rem 0;
+}
+
 .gh-inner h2 {
     text-align: center;
+    font-weight: 600;
 }
 
-.features-wrapper, .organizer-wrapper, .section-wrapper {
-    margin-top: 3rem;
-    padding-top: 6vmin;
+.gh-inner h3 {
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
 
-.features-wrapper, .organizer-wrapper, .section-wrapper {
+.features-wrapper, .section-wrapper {
     display: flex;
     flex-wrap: wrap;
 }
 
 .features-wrapper .post-title, 
-.organizer-wrapper .post-title ,
 .section-wrapper .post-title {
     flex: 0 0 100%; 
     margin-bottom: 20px;
@@ -49,16 +123,147 @@
     box-sizing: border-box;
 }
 
-.organizer-wrapper .post {
-    flex: 0 0 20%;
-    padding-bottom: 20px;
-    padding-right: 20px;
-    box-sizing: border-box; 
-}
-
 @media (max-width: 768px) {
-    .features-wrapper .post, .organizer-wrapper .post {
+    .features-wrapper .post {
         flex: 0 0 100%;
     }
 }
 
+.gh-outer.home-cover {
+  background: url("/assets/images/theatre-bg.jpg") no-repeat;
+  background-size: cover;
+  height: 70vw;
+  margin: 0;
+  padding: 0;
+}
+
+.home-cover .gh-inner {
+    margin: 0 10vw;
+}
+
+h2.cover-heading,
+h2.cover-subheading {
+    color: white !important;
+    margin: 0 0 8vw 0;
+}
+
+h2.cover-heading {
+    font-size: 5.5vw;
+    text-align: left;
+    line-height: 120%;
+    padding-top: 10vw;
+}
+
+h2.cover-subheading {
+    font-size: 4.6vw;
+    text-align: left;
+    line-height: 150%;
+}
+
+a.tickets-button {
+    color: white;
+    text-decoration: none;
+    font-size: 3vw;
+    font-weight: 800;
+    background-color: #A81C10;
+    padding: 20px;
+}
+
+a.tickets-button:hover {
+    text-decoration: underline;
+}
+
+.gh-foot {
+    color: var(--color-secondary-text);
+    padding-bottom: 8rem;
+    padding-top: 8rem;
+}
+
+.gh-foot-inner {
+    display: grid;
+    font-size: 1.3rem;
+    grid-template-columns: 1fr auto 1fr;
+}
+
+.gh-foot-menu .nav {
+    align-items: center;
+    display: inline-flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.gh-foot-menu .nav li {
+    align-items: center;
+    display: flex;
+}
+
+.gh-foot-menu .nav li+li:before {
+    content: "•";
+    font-size: .9rem;
+    line-height: 0;
+    padding: 0 1.2rem;
+}
+
+.featured-people {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.featured-person {
+    flex: 0 0 20%;
+    text-align: center;
+    padding: 0 10px;
+}
+
+h4.person-title {
+    color:#A81C10;
+    margin: 5px 0;
+}
+
+.featured-person a {
+    display: inline-block;
+    text-indent: -9999px;
+    width: 32px;
+    height: 32px;
+}
+
+.featured-person a.mastodon {
+  background: url("/assets/images/mastodon.png") no-repeat;
+}
+.featured-person a.website {
+  background: url("/assets/images/globe.png") no-repeat;
+}
+.featured-person a.twitter {
+  background: url("/assets/images/twitter.png") no-repeat;
+}
+
+img.profile-picture {
+    display: block;
+    margin: 0 auto;
+    width: 160px;
+    height: 160px;
+    border: 3px solid #A81C10;
+    border-radius: 80px;
+}
+
+.blog-entries {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.blog-entry {
+    flex: 0 0 33.3%;
+    padding: 0 20px 0 0;
+}
+
+a.read-more {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.single-content {
+    font-size: 1.8rem;
+}

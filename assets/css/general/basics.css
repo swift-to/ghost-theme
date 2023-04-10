@@ -20,6 +20,8 @@
     --font-serif: Lora, Times, serif;
     --navbar-height: 80px;
     --content-font-size: 1.7rem;
+    --gap: 10vw;
+    --head-nav-gap: 2.8rem;
 }
 
 :where(h1, h2, h3, h4, h5, h6) {

@@ -6,9 +6,9 @@
 
 .site-content {
     flex-grow: 1;
-    padding: 6vmin 0;
+    /* padding: 6vmin 0; */
 }
 
 .is-head-brand .site-content {
-    padding-top: max(8vmin, 5rem);
+    /* padding-top: max(8vmin, 5rem); */
 }
