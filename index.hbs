@@ -96,7 +96,7 @@
             <h3>Latest Updates</h3>
 
             <div class="blog-entries">
-                {{#get "posts" filter="tags:blog" order="published_at asc"}}
+                {{#get "posts" filter="tags:blog" order="published_at desc"}}
                     {{#foreach posts}}
                     <div class="blog-entry">
                         <h4 class="post-title">{{title}}</h3>
