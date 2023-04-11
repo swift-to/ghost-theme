@@ -211,6 +211,10 @@ a.tickets-button:hover {
     }
 }
 
+.gh-copyright {
+    margin-right: 30px;
+}
+
 .featured-people {
     display: flex;
     flex-wrap: wrap;
