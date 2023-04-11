@@ -184,7 +184,8 @@ a.tickets-button:hover {
 
 .gh-foot-menu .nav {
     align-items: center;
-    display: inline-flex;
+    display: flex;
+    flex-wrap: wrap;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -192,14 +193,22 @@ a.tickets-button:hover {
 
 .gh-foot-menu .nav li {
     align-items: center;
-    display: flex;
+    flex: 0 0 100%;
 }
 
 .gh-foot-menu .nav li+li:before {
-    content: "•";
     font-size: .9rem;
     line-height: 0;
     padding: 0 1.2rem;
+}
+
+@media (min-width: 768px) {
+    .gh-foot-menu .nav li+li:before {
+        content: "•";
+    }
+    .gh-foot-menu .nav li {
+        flex: auto;
+    }
 }
 
 .featured-people {
@@ -253,8 +262,14 @@ img.profile-picture {
 }
 
 .blog-entry {
-    flex: 0 0 33.3%;
-    padding: 0 20px 0 0;
+    flex: 0 0 50%;
+    padding: 0 20px 20px 0;
+}
+
+@media (max-width: 768px) {
+    .blog-entry {
+        flex: 0 0 100%;
+    }
 }
 
 a.read-more {
