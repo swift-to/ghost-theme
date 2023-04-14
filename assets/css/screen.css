@@ -284,3 +284,10 @@ a.read-more {
 .single-content {
     font-size: 1.8rem;
 }
+
+.single-sponsor-item {
+    width: 100%;
+}
+.single-sponsor-item img {
+    width: 280px;
+}
