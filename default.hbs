@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="{{asset "built/screen.css"}}">
 
     {{ghost_head}}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SBVC6WR0YD"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-SBVC6WR0YD');
+    </script>
 </head>
 
 <body class="{{body_class}}{{{block "body_class"}}} is-head-{{#match @custom.navigation_layout "Logo on the left"}}left-logo{{else match @custom.navigation_layout "Logo in the middle"}}middle-logo{{else}}stacked{{/match}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}{{^is "home"}}{{#if @site.cover_image}} is-head-brand{{/if}}{{/is}}">
@@ -82,16 +91,6 @@
     if (document.body.classList.contains('with-full-cover') && (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.platform))) {
         document.getElementsByClassName('cover')[0].style.height = window.innerHeight + 'px';
     }
-</script>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SBVC6WR0YD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-SBVC6WR0YD');
 </script>
 
 {{ghost_foot}}
