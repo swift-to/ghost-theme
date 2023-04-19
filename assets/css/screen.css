@@ -289,5 +289,6 @@ a.read-more {
     width: 100%;
 }
 .single-sponsor-item img {
-    width: 280px;
+    max-width: 280px;
+    max-height: 80px;
 }
