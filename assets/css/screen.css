@@ -292,3 +292,16 @@ a.read-more {
     max-width: 280px;
     max-height: 80px;
 }
+
+.multi-sponsor-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.multi-sponsor-item {
+    flex: initial;
+    margin-right: 20px;
+}
+.multi-sponsor-item img {
+    max-height: 80px;
+}
