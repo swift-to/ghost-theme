@@ -166,6 +166,16 @@ a.tickets-button {
     padding: 20px;
 }
 
+span#eb-countdown {
+    display: inline-block;
+    margin-top: 3vw;
+    color: white;
+    font-size: 2vw;
+    font-weight: 800;
+    text-decoration: underline;
+    /* padding: 20px; */
+}
+
 a.tickets-button:hover {
     text-decoration: underline;
 }

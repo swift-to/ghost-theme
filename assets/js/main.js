@@ -74,3 +74,35 @@
 //         },
 //     });
 // }
+
+/* ChatGPT Timer */
+// Countdown timer
+// Set the date we're counting down to
+var countDownDate = new Date("Aug 10, 2023 9:00:00").getTime();
+// var countDownDate = new Date("Jun 7, 2023 9:00:00").getTime();
+
+var countDownLeadingText = "Conference begins in" //"Early Bird sales end in"
+
+//break the date down into parts
+var days, hours, minutes, seconds;
+// Update the count down every 1 second
+var x = setInterval(function () {
+    // Get today's date and time
+    var now = new Date().getTime();
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+    // Time calculations for days, hours, minutes and seconds
+    days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    // Output the result in an element with id="demo"
+    let remainingTimeText = countDownLeadingText + " " + days + "d " + hours + "h " + minutes + "m " + seconds + "s "
+    // If the count down is over, write some text
+    // console.log("Time left: " +  remainingTimeText)
+    if (distance < 0) {
+        remainingTimeText = ""
+        clearInterval(x);
+    }
+    document.getElementById("eb-countdown").innerHTML = remainingTimeText;
+}, 1000);
