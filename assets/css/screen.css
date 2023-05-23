@@ -330,5 +330,5 @@ article.party p, article.venue p {
 
 article.party strong, article.venue strong {
     font-weight: 800;
-    font-size: 2.5vw;
+    font-size: max(18px, 2.5vw);
 }
