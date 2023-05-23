@@ -108,7 +108,7 @@ ul {
 }
 
 .features-wrapper p, .features-wrapper h4 {
-    font-size: max(16px, 1.5vw);
+    font-size: max(16px, 1.3vw);
 }
 
 .features-wrapper .post-title, 
