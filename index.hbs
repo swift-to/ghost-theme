@@ -30,7 +30,7 @@
   <!-- Speakers -->
     <div class="gh-outer">
         <section class="gh-inner">
-            <h3 class="post-title">Speakers</h3>
+            <h3 class="post-title">The Speakers</h3>
             <div class="featured-people">
                 {{#get "posts" filter="tags:speaker" order="published_at asc"}}
                 {{#foreach posts}}
@@ -53,6 +53,31 @@
                     <h4 class="person-title">+8 More TBA</h3>
                 </div>
             </div>
+        </section>
+    </div>
+
+    <div class="gh-outer">
+        <section class="gh-inner">
+                {{#get "pages" filter="tags:venue"}}
+                    {{#foreach pages}}
+                    <article class="{{post_class}} venue">
+                        <h3 class="post-title">{{title}}</h3>
+                        <p>{{content}}</p>
+                    </article>
+                    {{/foreach}}
+                {{/get}}
+        </section>
+    </div>
+    <div class="gh-outer">
+        <section class="gh-inner">
+                {{#get "pages" filter="tags:party"}}
+                    {{#foreach pages}}
+                    <article class="{{post_class}} party">
+                        <h3 class="post-title">{{title}}</h3>
+                        <p>{{content}}</p>
+                    </article>
+                    {{/foreach}}
+                {{/get}}
         </section>
     </div>
 

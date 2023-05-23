@@ -107,6 +107,10 @@ ul {
     flex-wrap: wrap;
 }
 
+.features-wrapper p, .features-wrapper h4 {
+    font-size: max(16px, 1.5vw);
+}
+
 .features-wrapper .post-title, 
 .section-wrapper .post-title {
     flex: 0 0 100%; 
@@ -168,12 +172,11 @@ a.tickets-button {
 
 span#eb-countdown {
     display: inline-block;
-    margin-top: 3vw;
+    padding-top: max(30px, 3vw);
     color: white;
     font-size: 2vw;
     font-weight: 800;
     text-decoration: underline;
-    /* padding: 20px; */
 }
 
 a.tickets-button:hover {
@@ -312,6 +315,20 @@ a.read-more {
     flex: initial;
     margin-right: 20px;
 }
+
 .multi-sponsor-item img {
     max-height: 80px;
+}
+
+article.party figure, article.venue figure {
+    margin-bottom: 20px;
+}
+
+article.party p, article.venue p {
+    font-size: max(16px, 2vw);
+}
+
+article.party strong, article.venue strong {
+    font-weight: 800;
+    font-size: 2.5vw;
 }
