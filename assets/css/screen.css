@@ -240,6 +240,10 @@ a.tickets-button:hover {
     padding: 10px;
 }
 
+.organizers .featured-person {
+    flex: 0 0 33%;
+}
+
 h4.person-title {
     color:#A81C10;
     margin: 5px 0;
