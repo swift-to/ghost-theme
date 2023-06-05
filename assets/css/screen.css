@@ -336,3 +336,30 @@ article.party strong, article.venue strong {
     font-weight: 800;
     font-size: max(18px, 2.5vw);
 }
+
+.counts-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 3rem 0;
+}
+
+.count {
+    flex: 1 1 0;
+    /* flex: 0 0 25%; */
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+span.count-number {
+    display: block;
+    font-size: max(16px, 3vw);
+    font-weight: 800;
+}
+
+span.count-label {
+    display: block;
+    font-size: max(12px, 2vw);
+    font-weight: 800;
+}
