@@ -1,0 +1,29 @@
+{{!< default}}
+
+<main class="site-main">
+       <div class="gh-outer">
+        <section class="gh-inner">
+            <h3 class="post-title">The Talks</h3>
+            <div class="featured-talks">
+                {{#get "posts" filter="tags:talk" order="published_at asc"}}
+                {{#foreach posts}}
+                <div class="featured-talk">
+                    {{#if feature_image}}
+                        <img
+                            class="profile-picture"
+                            src="{{img_url feature_image size="m"}}"
+                            alt="{{title}}"
+                            loading="lazy"
+                        >
+                    {{/if}}
+                    <div class="talk-details">
+                        <h4 class="talk-title">{{title}}</h3>
+                        <p class="talk-description">{{content}}</p>
+                    </div>
+                </div>
+                {{/foreach}}
+                {{/get}}
+            </div>
+        </section>
+    </div>
+</main>

@@ -363,3 +363,24 @@ span.count-label {
     font-size: max(12px, 2vw);
     font-weight: 800;
 }
+
+.featured-talk {
+  
+}
+
+.featured-talk .profile-picture {
+   display: block;
+   float: left;
+}
+
+.talk-details {
+   clear: both;
+}
+
+h4.talk-title {
+    font-size: max(18px, 2vw);
+}
+
+.featured-talk p {
+    margin: 0.6vw 0;
+}
