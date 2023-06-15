@@ -386,3 +386,9 @@ h4.talk-title {
     max-width: 720px;
     font-size: 18px;
 }
+
+img.kg-image {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
