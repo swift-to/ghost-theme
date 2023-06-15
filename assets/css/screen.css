@@ -365,7 +365,7 @@ span.count-label {
 }
 
 .featured-talk {
-  
+    margin-bottom: max(16px, 3vw); 
 }
 
 .featured-talk .profile-picture {
@@ -382,5 +382,5 @@ h4.talk-title {
 }
 
 .featured-talk p {
-    margin: 0.6vw 0;
+    margin: 1vw 0;
 }
