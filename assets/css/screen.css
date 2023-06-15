@@ -383,4 +383,6 @@ h4.talk-title {
 
 .featured-talk p {
     margin: 1vw 0;
+    max-width: 720px;
+    font-size: 18px;
 }
