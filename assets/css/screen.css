@@ -102,6 +102,16 @@ ul {
     margin-bottom: 20px;
 }
 
+.primary-description {
+    font-size: max(16px,2.25vw);
+    margin: 40px 0;
+}
+
+.primary-description strong {
+    font-size: max(18px,2.5vw);
+    font-weight: 800;
+}
+
 .features-wrapper, .section-wrapper {
     display: flex;
     flex-wrap: wrap;
