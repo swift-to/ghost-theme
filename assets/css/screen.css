@@ -193,6 +193,19 @@ a.tickets-button:hover {
     text-decoration: underline;
 }
 
+a.banner {
+    display: block;
+    text-align: center;
+    font-size: max(30px, 3vw);
+    padding: 10px;
+    background-color: #A81C10;
+    color: white;
+    text-decoration: none;
+}
+a.banner:hover {
+    text-decoration: underline;
+}
+
 .gh-foot {
     color: var(--color-secondary-text);
     padding-bottom: 8rem;
