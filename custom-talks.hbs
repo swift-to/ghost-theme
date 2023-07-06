@@ -5,7 +5,7 @@
         <section class="gh-inner">
             <h3 class="post-title">The Talks</h3>
             <div class="featured-talks">
-                {{#get "posts" filter="tags:talk" order="published_at asc"}}
+                {{#get "posts" filter="tags:talk" order="published_at asc" limit="all"}}
                 {{#foreach posts}}
                 <div class="featured-talk">
                     {{#if feature_image}}

@@ -70,7 +70,7 @@
         <section class="gh-inner">
             <h3 class="post-title">The Speakers</h3>
             <div class="featured-people">
-                {{#get "posts" filter="tags:speaker" order="published_at asc"}}
+                {{#get "posts" filter="tags:speaker" order="published_at asc" limit="all"}}
                 {{#foreach posts}}
                 <div class="featured-person">
                     {{#if feature_image}}
