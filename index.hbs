@@ -1,270 +1,48 @@
 {{!< default}}
 
 <main class="site-main">
-    <div class="gh-outer home-cover">
+
+    <img class="closing-slide" src="{{asset "images/closing-slide.jpg"}}" alt="Swift TO Logo with words below 'Thank you for joining us'">
+
+    <!-- Video List -->
+    <div class="gh-outer video-list">
         <section class="gh-inner">
-            <h2 class="cover-heading">The Swift conference in Downtown Toronto is back!</h2>
-            <h2 class="cover-subheading">August 10/11th 2023 <br />@ TIFF Bell Lightbox</h2>
-            <a class="tickets-button" href="#tickets">Get Your Tickets</a>
-            <br />
-            <span id="eb-countdown"></span>
-        </section>
-    </div>
-
-    <div class="gh-outer">
-        <section class="primary-description">Join us this August for 2 days of talks from a diverse set of knowledgeable speakers. 
-            Themes of the conference include <strong>modular app design</strong>, 
-            <strong>scalable architecture</strong>, 
-            <strong>Swift concurrency</strong>, 
-            <strong>language evolution</strong>, 
-            <strong>accessibility</strong>, 
-            <strong>design integration</strong> and <strong>deep Swift mastery</strong>. 
-            Practical talks for you/your team that will deepen your knowledge and passion for working in our ecosystem. 
-            Celebrate with us at the home of the Toronto International Film Festival in a big comfy theatre with iconic CN Tower views from the party patio.
-        </section>
-    </div>
-
-        <!-- Conference Features -->
-    <div class="gh-outer">
-        <section class="counts-wrapper gh-inner">
-            <div class="count">
-                <span class="count-number">2</span>
-                <span class="count-label">Days</span>
-            </div>
-            <div class="count">
-                <span class="count-number">17</span>
-                <span class="count-label">Speakers</span>
-            </div>
-            <div class="count">
-                <span class="count-number">&gt;225</span>
-                <span class="count-label">Attendees and growing</span>
-            </div>
-            <div class="count">
-                <span class="count-number">1</span>
-                <span class="count-label">Awesome venue</span>
-            </div>
-        </section>
-    </div>
-
-    <!-- Save Banner -->
-    {{!-- <a href="https://www.eventbrite.com/e/492122691217/?discount=countdown-100" class="banner canada-day">Save $100 with promo code <strong>COUNTDOWN-100</strong> before sale close July 28th.</a></div> --}}
-
-    <!-- Conference Features -->
-    {{!-- <div class="gh-outer">
-        <section class="features-wrapper gh-inner">
-                {{#get "posts" filter="tags:feature" order="published_at asc"}}
-                    {{#foreach posts}}
-                    <article class="{{post_class}}">
-                        <h4 class="post-title">{{title}}</h3>
-                        <p>{{content}}</p>
-                    </article>
-                    {{/foreach}}
-                {{/get}}
-        </section>
-    </div>
-
-    <hr /> --}}
-
-    <!-- Speakers -->
-    <div class="gh-outer">
-        <section class="gh-inner">
-            <h3 class="post-title">The Speakers</h3>
-            <div class="featured-people">
-                {{#get "posts" filter="tags:speaker" order="published_at asc" limit="all"}}
+            <h3 class="post-title">Thurs Aug 10th Talks</h3>
+            <div class="videos">
+                {{#get "posts" filter="tags:video-aug10" order="published_at asc"}}
                 {{#foreach posts}}
-                <div class="featured-person">
-                    {{#if feature_image}}
-                        <img
-                            class="profile-picture"
-                            src="{{img_url feature_image size="m"}}"
-                            alt="{{title}}"
-                            loading="lazy"
-                        >
-                    {{/if}}
-                    <h4 class="person-title">{{title}}</h3>
-                    <p>{{content}}</p>
-                </div>
-                {{/foreach}}
-                {{/get}}
-            </div>
-        </section>
-    </div>
-
-    <!-- Venue -->
-    <div class="gh-outer">
-        <section class="gh-inner">
-                {{#get "pages" filter="tags:venue"}}
-                    {{#foreach pages}}
-                    <article class="{{post_class}} venue">
-                        <h3 class="post-title">{{title}}</h3>
-                        <p>{{content}}</p>
-                    </article>
-                    {{/foreach}}
-                {{/get}}
-        </section>
-    </div>
-
-    <!-- Party -->
-    <div class="gh-outer">
-        <section class="gh-inner">
-                {{#get "pages" filter="tags:party"}}
-                    {{#foreach pages}}
-                    <article class="{{post_class}} party">
-                        <h3 class="post-title">{{title}}</h3>
-                        <p>{{content}}</p>
-                    </article>
-                    {{/foreach}}
-                {{/get}}
-        </section>
-    </div>
-
-    <!-- Save Banner -->
-    {{!-- <a href="https://www.eventbrite.com/e/492122691217/?discount=countdown-100" class="banner canada-day">Save $100 with promo code <strong>COUNTDOWN-100</strong> before sale close July 28th.</a></div> --}}
-
-    <!-- Ticket Checkout -->
-
-    <div id="tickets" class="gh-outer">
-        <section class="gh-inner section-wrapper" id="sign-up">
-            <div class="container" style ="width: 100%;">
-                <div id="eventbrite-widget-container-492122691217"></div>
-                    <script src="https://www.eventbrite.ca/static/widgets/eb_widgets.js"></script>
-                    <script type="text/javascript">
-                        var callback = function () {
-                            console.log('Order complete!');
-                        };
-
-                        window.EBWidgets.createWidget({
-                            // Required
-                            widgetType: 'checkout',
-                            eventId: '492122691217',
-                            iframeContainerId: 'eventbrite-widget-container-492122691217',
-
-                            // Optional
-                            iframeContainerHeight: 670,  // Widget height in pixels. Defaults to a minimum of 425px if not provided
-                            onOrderComplete: callback  // Method called when an order has successfully completed
-                        });
-                    </script>
-            </div>
-        </section>
-    </div>
-
-    <hr />
-
-    <!-- Email Sign Up -->
-    <div class="gh-outer">
-        <section class="gh-inner section-wrapper" id="sign-up">
-            <h3>Latest Updates</h3>
-
-            <div class="blog-entries">
-                {{#get "posts" filter="tags:blog" order="published_at desc"}}
-                    {{#foreach posts}}
-                    <div class="blog-entry">
-                        <h4 class="post-title">{{title}}</h3>
-                        <p>{{excerpt}}</p>
-                        <a class="read-more" href="{{url}}">Read More</a>
-                    </div>
-                    {{/foreach}}
-                {{/get}}
-            </div>
-
-            <div class="container">
-                <h3 class="conference-sign-up post-title">Subscribe to our newsletter:</h3>
-                <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
-                <div class="email-signup">
-                    <form id="mc-embedded-subscribe-form"
-                        action="https://swiftconf.us20.list-manage.com/subscribe/post?u=e1881a1d2f2758bcf9d253219&amp;amp;id=6747d0e9c4"
-                        method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate="">
-                        <div id="mc_embed_signup_scroll"><input class="email" id="mce-EMAIL" type="email" value="" name="EMAIL"
-                                placeholder="email address" required="">
-                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-                                    name="b_e1881a1d2f2758bcf9d253219_6747d0e9c4" tabindex="-1" value=""></div>
-                            <div class="clear"><input class="button" id="mc-embedded-subscribe" type="submit" value="Sign Up"
-                                    name="notify"></div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <hr />
-    
-    <!-- Sponsors -->
-    <div class="gh-outer">
-        <section class="gh-inner sponsors-wrapper" id="sign-up">
-            <h3>Diversity Scholarship Sponsor</h3>
-            <div class="single-sponsor-item">
-                <a href="https://jobs.scotiabank.com/search/?createNewAlert=false&amp;q=ios+developer&amp;locationsearch=" target="_blank">
-                    <img src="/assets/images/sponsor-scotiabank-small.png" alt="Scotiabank">
-                </a>
-            </div>
-            <br />
-            <h3>Supporting Sponsor</h3>
-            <div class="multi-sponsor-container">
-                <div class="multi-sponsor-item">
-                    <a href="https://www.runway.team/?utm_source=sponsorship&utm_medium=event&utm_campaign=swiftto&utm_content=aug10-23" target="_blank">
-                        <img src="/assets/images/runway.png" alt="Runway">
+                <div class="featured-video">
+                    <a href="{{excerpt}}" target="_blank">
+                        {{#if feature_image}}
+                            <img
+                                class="video-image"
+                                src="{{img_url feature_image size="m"}}"
+                                alt="Photo of {{title}}"
+                                loading="lazy"
+                            >
+                        {{/if}}
+                        <h4 class="video-title">{{title}}</h3>
                     </a>
-                </div>
-                <div class="multi-sponsor-item">
-                    <a href="https://detailspro.app/?utm_campaign=swiftto" target="_blank">
-                        <img src="/assets/images/sponsor-details-pro-small.png" alt="DetailsPro">
-                    </a>
-                </div>
-                <div class="multi-sponsor-item">
-                    <a href="https://mtjc.fireside.fm" target="_blank">
-                        <img src="/assets/images/sponsor-mtjc-logo.png" alt="More Than Just Code Podcast">
-                    </a>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <hr />
-
-    <!-- Organizers -->
-    <div class="gh-outer organizers">
-        <section class="gh-inner">
-            <h3 class="post-title">Organizers</h3>
-            <div class="featured-people">
-                {{#get "posts" filter="tags:organizer" order="published_at asc"}}
-                {{#foreach posts}}
-                <div class="featured-person">
-                    {{#if feature_image}}
-                        <img
-                            class="profile-picture"
-                            src="{{img_url feature_image size="m"}}"
-                            alt="{{title}}"
-                            loading="lazy"
-                        >
-                    {{/if}}
-                    <h4 class="person-title">{{title}}</h3>
-                    <p>{{content}}</p>
                 </div>
                 {{/foreach}}
                 {{/get}}
             </div> 
         </section>
-    </div>
 
-    <hr />
+        <section class="gh-inner">
+            <h3 class="post-title">Friday Aug 11th Talks</h3>
+            <p>Coming very soon. We are just getting some missing camera conent from the venue.</p>
+        </section>
 
-    <!-- COC -->
-    <div class="gh-outer">
-        <section class="gh-inner section-wrapper">
-                {{#get "pages" filter="tags:code-of-conduct"}}
-                    {{#foreach pages}}
-                    <article class="{{post_class}}">
-                        <h3 class="post-title">{{title}}</h3>
-                        <p>{{content}}</p>
-                    </article>
-                    {{/foreach}}
-                {{/get}}
+        <hr />
+
+        <section class="gh-inner">
+            <h3>ℹ️ Swift TO is shutting down</h4>
+            <p>Unfortunately, we took a loss running the conference this year and will be closing down. Thanks to everyone who joined us this year.</p>
+            <br />
+            <p><a href="/swift-to-is-closing-down" class="statement">Read Full Statement</a></p>
         </section>
     </div>
-
-
 </main>
 
 {{#contentFor "body_class"}}{{#if @site.cover_image}} with-full-cover is-head-transparent{{/if}}{{#if @member}} logged-in{{/if}}{{/contentFor}}
