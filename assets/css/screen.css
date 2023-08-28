@@ -421,6 +421,7 @@ img.closing-slide {
     display: block;
     padding: 20px 0 20px 0;
     margin: 0 auto;
+    max-width: 90%;
 }
 
 .videos {
@@ -433,6 +434,12 @@ img.closing-slide {
     flex: 0 0 25%;
     text-align: center;
     padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .featured-video {
+        flex: 0 0 100%;
+    }
 }
 
 .featured-video a {
