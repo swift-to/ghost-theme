@@ -435,6 +435,15 @@ img.closing-slide {
     padding: 10px;
 }
 
+.featured-video a {
+    text-decoration: none;
+    color: black;
+}
+
+.featured-video a:hover {
+    text-decoration: underline;
+}
+
 .video-image {
     width: 100%;
 }
@@ -451,6 +460,7 @@ a.statement:hover {
 article.tag-blog {
     max-width: 80%;
     margin: 0 auto;
+    font-size: 1.8rem;
 }
 
 @media (max-width: 768px) {
