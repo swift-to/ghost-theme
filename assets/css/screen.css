@@ -463,6 +463,10 @@ article.tag-blog {
     font-size: 1.8rem;
 }
 
+article.tag-blog p {
+    font-size: 2.2rem;
+}
+
 @media (max-width: 768px) {
     article.tag-blog {
         max-width: 100%;
