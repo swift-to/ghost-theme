@@ -4,6 +4,19 @@
 
     <img class="closing-slide" src="{{asset "images/closing-slide.jpg"}}" alt="Swift TO Logo with words below 'Thank you for joining us'">
 
+    <!-- Mini Gallery -->
+    <div class="gh-outer">
+        <section class="gh-inner">
+                {{#get "pages" filter="tags:gallery"}}
+                    {{#foreach pages}}
+                    <article class="{{post_class}}">
+                        <p>{{content}}</p>
+                    </article>
+                    {{/foreach}}
+                {{/get}}
+        </section>
+    </div>
+
     <!-- Video List -->
     <div class="gh-outer video-list">
         <section class="gh-inner">
